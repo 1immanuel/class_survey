@@ -1,0 +1,25 @@
+{
+  "name": "class_survey",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db:reset": "npm run db:drop; npm run db:init;",
+    "db:connect": "psql postgres://tfarebzv:N1cLa2USK47EobrKddRLV9aFj27ZEF_5@batyr.db.elephantsql.com/tfarebzv",
+    "db:seed": "psql -f seed.sql postgres://tfarebzv:N1cLa2USK47EobrKddRLV9aFj27ZEF_5@batyr.db.elephantsql.com/tfarebzv",
+    "db:drop": "psql -f reset.sql postgres://tfarebzv:N1cLa2USK47EobrKddRLV9aFj27ZEF_5@batyr.db.elephantsql.com/tfarebzv",
+    "db:init": "psql -f schema.sql postgres://tfarebzv:N1cLa2USK47EobrKddRLV9aFj27ZEF_5@batyr.db.elephantsql.com/tfarebzv"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-es6-template-engine": "^2.2.3",
+    "pg-promise": "^10.10.2"
+  }
+}
